@@ -29,7 +29,7 @@ class SendSMSPlasmaDesktopSkill(MycroftSkill):
         
     def handle_sendsms_plasma_desktopskill_intent(self, message):
         self.speak_dialog("sendSMS.state")
-        os.system("python /opt/mycroft/skills/mycroft-sendSMS-plasma-desktop/sendSMS.py")
+        os.system("python /opt/mycroft/skills/mycroft-sendSMS-plasma-skill/sendSMS.py")
         
 
     def stop(self):
