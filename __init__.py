@@ -17,6 +17,7 @@ class SendSMSPlasmaDesktopSkill(MycroftSkill):
     # The constructor of the skill, which calls MycroftSkill's constructor
     def __init__(self):
         super(SendSMSPlasmaDesktopSkill, self).__init__(name="SendSMSPlasmaDesktopSkill")
+        self.sendSMS_index = dirname(__file__) + '/sendSMS.py'
         
     # This method loads the files needed for the skill's functioning, and
     # creates and registers each intent that the skill uses
@@ -29,7 +30,8 @@ class SendSMSPlasmaDesktopSkill(MycroftSkill):
         
     def handle_sendsms_plasma_desktopskill_intent(self, message):
         self.speak_dialog("sendSMS.state")
-        os.system("python /opt/mycroft/skills/mycroft-sendSMS-plasma-skill/sendSMS.py")
+        loc = "python {0}".format(self.sendSMS_index)
+        os.system(loc)
         
 
     def stop(self):
