@@ -1,7 +1,7 @@
 {
-  "utterance": "send",
+  "utterance": "send sms to brother",
   "intent_type": "SendSMSKeywordIntent",
   "intent": {
-    "SendSMSPlasmaDesktopSkillKeyword": "SMS"
+    "SendSMSPlasmaDesktopSkillKeyword": "send sms to"
   }
 }
